@@ -1,0 +1,53 @@
+@use './global' as *;
+@use './variables' as *;
+
+.perspective-container {
+  perspective: 1000px;
+  perspective-origin: center;
+}
+
+.swiper-slide {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.custom-cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  transform: translate3d(-50%, -50%, 0);
+  transition: transform 0.1s linear;
+}
+
+body.swiper-grabbing .custom-cursor {
+  background-color: black;
+  border-color: white;
+  svg {
+    fill: white;
+  }
+}
+
+@media (max-width: 450px) {
+  .swiper-grid-slide {
+    .active-grid-slider {
+      width: 200px;
+      min-width: 200px;
+    }
+
+    .no-active-grid-slider {
+      width: 50px;
+    }
+  }
+}
+@media (min-width: 451px) and (max-width: 650px) {
+  .swiper-grid-slide {
+    .active-grid-slider {
+      width: 230px;
+      min-width: 230px;
+    }
+
+    .no-active-grid-slider {
+      width: 150px;
+    }
+  }
+}
