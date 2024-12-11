@@ -29,7 +29,7 @@
 
 .custom-divider {
   flex-grow: 1;
-  margin: 0 1rem; /* تكافئ mx-4 */
+  margin: 0 1rem;
   border-top: 1px solid white;
 }
 
@@ -54,7 +54,7 @@
     width: 0;
     height: 0;
     object-fit: cover;
-    z-index: 2; /* الصورة الجديدة فوق القديمة */
+    z-index: 2;
     animation: grow 0.8s ease-in-out forwards;
   }
 

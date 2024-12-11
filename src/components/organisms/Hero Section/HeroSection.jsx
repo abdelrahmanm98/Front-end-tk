@@ -76,17 +76,14 @@ const HeroSection = () => {
               className='progress-button relative cursor-pointer'
               onClick={nextSlide}
             >
-              {/* الصورة */}
               <img
                 src={slides[(currentSlide + 1) % slides.length]}
                 alt='Next Slide'
                 className='next-image'
               />
-              {/* النص */}
               <div className='absolute inset-0 flex items-center justify-center'>
                 <span className='text-white text-xl'>Next</span>
               </div>
-              {/* البوردر المتحرك */}
               <svg className='progress-ring' viewBox='0 0 100 100'>
                 <rect
                   x='5'
@@ -105,7 +102,6 @@ const HeroSection = () => {
               </svg>
             </div>
 
-            {/* عداد النص */}
             <div className='text-white flex items-center'>
               <span className='text-lg font-bold'>{`0${
                 currentSlide + 1
